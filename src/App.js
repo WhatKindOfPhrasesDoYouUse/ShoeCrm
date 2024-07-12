@@ -2,6 +2,7 @@ import React from 'react';
 import RoleManagement from './components/RoleManagement';
 import BrandManagement from './components/BrandManagement';
 import CategoryManagement from './components/CategoryManagement';
+import PickupPointManagement from "./components/PickupPointManagement";
 import './App.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
             <RoleManagement />
             <BrandManagement />
             <CategoryManagement />
+            <PickupPointManagement />
         </div>
     );
 }
