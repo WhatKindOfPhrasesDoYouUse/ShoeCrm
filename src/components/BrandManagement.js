@@ -116,7 +116,7 @@ const BrandManagement = () => {
                 </Grid>
             </Paper>
             <Paper elevation={3} style={{ padding: '16px', marginBottom: '16px' }}>
-                <Typography variant="h5">Список ролей</Typography>
+                <Typography variant="h5">Список брендов</Typography>
                 <List>
                     {brands.map((brand) => (
                         <ListItem key={brand.id} button>
