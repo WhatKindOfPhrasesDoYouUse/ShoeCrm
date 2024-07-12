@@ -13,6 +13,23 @@
   }
 }
 
+/* src/App.css */
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.MuiPaper-root {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.MuiTypography-h3 {
+  margin-bottom: 20px;
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
