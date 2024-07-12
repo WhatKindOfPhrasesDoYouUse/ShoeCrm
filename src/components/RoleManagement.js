@@ -65,7 +65,7 @@ const RoleManagement = () => {
     return (
         <Container>
             <Typography variant="h3" gutterBottom>
-                Управление ролями
+                <center>Управление ролями</center>
             </Typography>
             <Paper elevation={3} style={{ padding: '16px', marginBottom: '16px' }}>
                 <Typography variant="h5">Добавление ролей</Typography>

@@ -65,7 +65,7 @@ const CategoryManagement = () => {
     return (
         <Container>
             <Typography variant="h3" gutterBottom>
-                Управление категориями
+                <center>Управление категориями</center>
             </Typography>
             <Paper elevation={3} style={{ padding: '16px', marginBottom: '16px' }}>
                 <Typography variant="h5">Добавление категорий</Typography>

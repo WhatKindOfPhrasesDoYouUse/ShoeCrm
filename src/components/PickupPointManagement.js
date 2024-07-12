@@ -68,7 +68,7 @@ const PickupPointManagement = () => {
     return (
         <Container>
             <Typography variant="h3" gutterBottom>
-                Управление пунктами выдачи
+                <center>Управление пунктами выдачи</center>
             </Typography>
             <Paper elevation={3} style={{ padding: '16px', marginBottom: '16px' }}>
                 <Typography variant="h5">Добавление пункта выдачи</Typography>
