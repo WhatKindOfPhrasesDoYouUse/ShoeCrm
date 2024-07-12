@@ -1,4 +1,3 @@
-// src/components/RoleManagement.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, TextField, Button, List, ListItem, ListItemText, Typography, Paper, Grid } from '@mui/material';
@@ -20,7 +19,7 @@ const RoleManagement = () => {
             const response = await axios.get(`${API_URL}/GetRoles`);
             setRoles(response.data);
         } catch (error) {
-            console.error('Error fetching roles:', error);
+            console.error('Ошибка получения ролей:', error);
         }
     };
 
@@ -33,7 +32,7 @@ const RoleManagement = () => {
             fetchRoles();
             setRoleName('');
         } catch (error) {
-            console.error('Error adding role:', error);
+            console.error('Ошибкак добавления роли:', error);
         }
     };
 
@@ -47,7 +46,7 @@ const RoleManagement = () => {
             setUpdateRoleId(null);
             setUpdateRoleName('');
         } catch (error) {
-            console.error('Error updating role:', error);
+            console.error('Ошибка обновления роли:', error);
         }
     };
 
@@ -59,42 +58,42 @@ const RoleManagement = () => {
             alert(response.data);
             fetchRoles();
         } catch (error) {
-            console.error('Error deleting role:', error);
+            console.error('Ошибка удаления роли:', error);
         }
     };
 
     return (
         <Container>
             <Typography variant="h3" gutterBottom>
-                Role Management
+                Управление ролями
             </Typography>
             <Paper elevation={3} style={{ padding: '16px', marginBottom: '16px' }}>
-                <Typography variant="h5">Add Role</Typography>
+                <Typography variant="h5">Добавление ролей</Typography>
                 <Grid container spacing={2} alignItems="center">
                     <Grid item xs={8}>
                         <TextField
                             fullWidth
                             variant="outlined"
-                            label="Role Name"
+                            label="Имя роли"
                             value={roleName}
                             onChange={(e) => setRoleName(e.target.value)}
                         />
                     </Grid>
                     <Grid item xs={4}>
                         <Button variant="contained" color="primary" onClick={addRole} fullWidth>
-                            Add Role
+                            Добавить роль
                         </Button>
                     </Grid>
                 </Grid>
             </Paper>
             <Paper elevation={3} style={{ padding: '16px', marginBottom: '16px' }}>
-                <Typography variant="h5">Update Role</Typography>
+                <Typography variant="h5">Обновить роль</Typography>
                 <Grid container spacing={2} alignItems="center">
                     <Grid item xs={4}>
                         <TextField
                             fullWidth
                             variant="outlined"
-                            label="Role ID"
+                            label="RoleId"
                             type="number"
                             value={updateRoleId}
                             onChange={(e) => setUpdateRoleId(e.target.value)}
@@ -104,26 +103,27 @@ const RoleManagement = () => {
                         <TextField
                             fullWidth
                             variant="outlined"
-                            label="New Role Name"
+                            label="Имя роли"
                             value={updateRoleName}
                             onChange={(e) => setUpdateRoleName(e.target.value)}
                         />
                     </Grid>
                     <Grid item xs={4}>
                         <Button variant="contained" color="secondary" onClick={updateRole} fullWidth>
-                            Update Role
+                            Обновить роль
                         </Button>
                     </Grid>
                 </Grid>
             </Paper>
             <Paper elevation={3} style={{ padding: '16px', marginBottom: '16px' }}>
-                <Typography variant="h5">Roles List</Typography>
+                <Typography variant="h5">Список ролей</Typography>
                 <List>
                     {roles.map((role) => (
                         <ListItem key={role.id} button>
-                            <ListItemText primary={role.name} />
+                            <ListItemText primary={`ID: ${role.id}  name: ${role.name}`} />
+                            {/*<ListItemText primary={role.name} />*/}
                             <Button variant="outlined" color="error" onClick={() => deleteRole(role.id)}>
-                                Delete
+                                Удалить
                             </Button>
                         </ListItem>
                     ))}
