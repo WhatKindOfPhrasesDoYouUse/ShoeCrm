@@ -9,6 +9,7 @@ import ClientManagement from './components/ClientManagement';
 import ShoeManagement from './components/ShoeManagement';
 import CartManagement from "./components/CartManagement";
 import CartItemManagement from "./components/CartItemManagement";
+import OrderManagement from './components/OrderManagement';
 import './App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                     <Button color="inherit" component={Link} to="/shoes">Обувь</Button>
                     <Button color="inherit" component={Link} to="/carts">Корзины</Button>
                     <Button color="inherit" component={Link} to="/cartItems">Объекты коризны</Button>
+                    <Button color="inherit" component={Link} to="/orders">Заказы</Button>
                 </Toolbar>
             </AppBar>
             <Container style={{ marginTop: '10px' }}>
@@ -39,6 +41,7 @@ function App() {
                     <Route path="/shoes" element={<ShoeManagement />} />
                     <Route path="/carts" element={<CartManagement />} />
                     <Route path="/cartItems" element={<CartItemManagement />} />
+                    <Route path="/orders" element={<OrderManagement />} />
                 </Routes>
             </Container>
         </Router>
