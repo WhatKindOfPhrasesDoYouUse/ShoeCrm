@@ -7,6 +7,7 @@ import CategoryManagement from './components/CategoryManagement';
 import PickupPointManagement from './components/PickupPointManagement';
 import ClientManagement from './components/ClientManagement';
 import ShoeManagement from './components/ShoeManagement';
+import CartManagement from "./components/CartManagement";
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
                     <Button color="inherit" component={Link} to="/pickup-points">Пункты выдачи</Button>
                     <Button color="inherit" component={Link} to="/clients">Клиенты</Button>
                     <Button color="inherit" component={Link} to="/shoes">Обувь</Button>
+                    <Button color="inherit" component={Link} to="/carts">Корзины</Button>
                 </Toolbar>
             </AppBar>
             <Container style={{ marginTop: '10px' }}>
@@ -33,6 +35,7 @@ function App() {
                     <Route path="/pickup-points" element={<PickupPointManagement />} />
                     <Route path="/clients" element={<ClientManagement />} />
                     <Route path="/shoes" element={<ShoeManagement />} />
+                    <Route path="/carts" element={<CartManagement />} />
                 </Routes>
             </Container>
         </Router>
