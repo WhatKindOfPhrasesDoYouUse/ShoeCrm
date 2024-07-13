@@ -29,6 +29,10 @@
   margin-bottom: 20px;
 }
 
+.container {
+  flex-grow: 1;
+  padding-top: 10px;
+}
 
 .App-header {
   background-color: #282c34;
