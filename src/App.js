@@ -10,6 +10,7 @@ import ShoeManagement from './components/ShoeManagement';
 import CartManagement from "./components/CartManagement";
 import CartItemManagement from "./components/CartItemManagement";
 import OrderManagement from './components/OrderManagement';
+import OrderItemManagement from './components/OrderItemManagement';
 import './App.css';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                     <Button color="inherit" component={Link} to="/carts">Корзины</Button>
                     <Button color="inherit" component={Link} to="/cartItems">Объекты коризны</Button>
                     <Button color="inherit" component={Link} to="/orders">Заказы</Button>
+                    <Button color="inherit" component={Link} to="/orderItems">Объекты заказа</Button>
                 </Toolbar>
             </AppBar>
             <Container style={{ marginTop: '10px' }}>
@@ -42,6 +44,7 @@ function App() {
                     <Route path="/carts" element={<CartManagement />} />
                     <Route path="/cartItems" element={<CartItemManagement />} />
                     <Route path="/orders" element={<OrderManagement />} />
+                    <Route path="/orderItems" element={<OrderItemManagement />} />
                 </Routes>
             </Container>
         </Router>
