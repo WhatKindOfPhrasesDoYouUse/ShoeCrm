@@ -45,6 +45,20 @@
   color: white;
 }
 
+.MuiButton-root {
+  font-size: 0.8rem; /* Настройте это значение по необходимости */
+}
+.MuiToolbar-root {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.MuiButton-root {
+  margin: 5px; /* Настройте это значение по необходимости */
+}
+
+
 .App-link {
   color: #61dafb;
 }
